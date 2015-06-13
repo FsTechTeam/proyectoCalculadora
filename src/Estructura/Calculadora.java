@@ -11,7 +11,7 @@ package Estructura;
  */
 public class Calculadora {
  
-    public Operacion TipoOperacion;
+    private Operacion TipoOperacion;
     private double resultado;
     
     public Calculadora(){
