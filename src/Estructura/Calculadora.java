@@ -14,7 +14,7 @@ public class Calculadora {
     public Operacion TipoOperacion;
     private double resultado;
     
-    public void Calculadora(){
+    public Calculadora(){
         this.resultado=0;
     }
     

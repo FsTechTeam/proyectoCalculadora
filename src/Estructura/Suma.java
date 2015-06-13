@@ -11,6 +11,11 @@ package Estructura;
  */
 public class Suma extends Tiene2Op implements Operacion{
 
+    public Suma() {
+       this.Op1=0;
+       this.Op2=0;
+    }
+
     
     @Override
     public float Operar() {

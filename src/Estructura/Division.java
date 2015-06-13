@@ -11,6 +11,10 @@ package Estructura;
  */
 public class Division extends Tiene2Op implements Operacion {
 
+    public Division(){
+       this.Op1=0;
+       this.Op2=0;
+    }
   
     @Override
     public float Operar() {

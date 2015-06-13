@@ -11,6 +11,11 @@ package Estructura;
  */
 public class Resta extends Tiene2Op implements Operacion {
 
+    public Resta() {
+       this.Op1=0;
+       this.Op2=0;
+    }
+
     @Override
     public float Operar() {
         return this.Op1-this.Op2;
