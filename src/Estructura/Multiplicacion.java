@@ -17,7 +17,7 @@ public class Multiplicacion extends Tiene2Op implements Operacion {
     }
 
     @Override
-    public float Operar() {
+    public double Operar() {
         return this.Op1*this.Op2;
     }
 

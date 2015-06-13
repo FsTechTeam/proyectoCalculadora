@@ -11,6 +11,6 @@ package Estructura;
  */
 public interface Operacion {
  
-    public float Operar();
+    public double Operar();
    
 }
