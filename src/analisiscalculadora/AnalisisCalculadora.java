@@ -22,7 +22,7 @@ public class AnalisisCalculadora {
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
         /*Menu de la aplicacion*/
-
+        /*las funciones deben devolver enteros a excepcion de la division y las trigonometricas*/
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         int subopcion;
         int opcion;
