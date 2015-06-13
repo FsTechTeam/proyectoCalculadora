@@ -4,6 +4,7 @@
  */
 package analisiscalculadora;
 
+import Estructura.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -26,8 +27,8 @@ public class AnalisisCalculadora {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         int subopcion;
         int opcion;
-        int operando1 = 0, operando2 = 0;
-        float Resultado = 0;
+        Calculadora calculadora=new Calculadora();
+        
         System.out.println("\033[36mEscoja una opcion:");
         System.out.println("1.Suma");
         System.out.println("2.Resta");
@@ -43,14 +44,16 @@ public class AnalisisCalculadora {
                 case 1:
                     /*suma*/
                     try {
+                        Suma suma=new Suma();
                         System.out.println("Ingrese el primer Operando:");
-                        operando1 = Integer.parseInt(in.readLine());
+                        suma.Op1 = Integer.parseInt(in.readLine());
                         System.out.println("Ingrese el segundo Operando:");
-                        operando2 = Integer.parseInt(in.readLine());
-
-                        /*Resultado=llamada a funcion sumar*/
-                        /* System.out.println("el resultado es: "+Resultado);*/
-                        /*submenu*/
+                        suma.Op2 = Integer.parseInt(in.readLine());
+                        
+                        calculadora.setTipoOperacion(suma);
+                        calculadora.EjecutarOperacion();
+                        calculadora.ImprimirResultado();
+                        
                         System.out.println("\033[36mDesea realizar otra operacion?: ");
                         System.out.println("1.Si");
                         System.out.println("2.No");
@@ -75,14 +78,16 @@ public class AnalisisCalculadora {
                 case 2:/*resta*/
 
                     try {
+                        Resta resta=new Resta();
                         System.out.println("Ingrese el primer Operando:");
-                        operando1 = Integer.parseInt(in.readLine());
+                        resta.Op1 = Integer.parseInt(in.readLine());
                         System.out.println("Ingrese el segundo Operando:");
-                        operando2 = Integer.parseInt(in.readLine());
+                        resta.Op2 = Integer.parseInt(in.readLine());
 
-                        /*Resultado=llamada a funcion restar*/
-                        /* System.out.println("el resultado es: "+Resultado);*/
-                        /*submenu*/
+                        calculadora.setTipoOperacion(resta);
+                        calculadora.EjecutarOperacion();
+                        calculadora.ImprimirResultado();
+                        
                         System.out.println("\033[36mDesea realizar otra operacion?: ");
                         System.out.println("1.Si");
                         System.out.println("2.No");
@@ -108,14 +113,16 @@ public class AnalisisCalculadora {
                     /*multiplicacion*/
 
                     try {
+                        Multiplicacion multiplicacion=new Multiplicacion();
                         System.out.println("Ingrese el primer Operando:");
-                        operando1 = Integer.parseInt(in.readLine());
+                        multiplicacion.Op1 = Integer.parseInt(in.readLine());
                         System.out.println("Ingrese el segundo Operando:");
-                        operando2 = Integer.parseInt(in.readLine());
+                        multiplicacion.Op2= Integer.parseInt(in.readLine());
 
-                        /*Resultado=llamada a funcion multiplicar*/
-                        /* System.out.println("el resultado es: "+Resultado);*/
-                        /*submenu*/
+                        calculadora.setTipoOperacion(multiplicacion);
+                        calculadora.EjecutarOperacion();
+                        calculadora.ImprimirResultado();
+                        
                         System.out.println("\033[36mDesea realizar otra operacion?: ");
                         System.out.println("1.Si");
                         System.out.println("2.No");
@@ -140,14 +147,17 @@ public class AnalisisCalculadora {
                 case 4:
                     /*division*/
                     try {
+                        Division division=new Division();
+                        
                         System.out.println("Ingrese el primer Operando:");
-                        operando1 = Integer.parseInt(in.readLine());
+                        division.Op1 = Integer.parseInt(in.readLine());
                         System.out.println("Ingrese el segundo Operando:");
-                        operando2 = Integer.parseInt(in.readLine());
+                        division.Op2 = Integer.parseInt(in.readLine());
 
-                        /*Resultado=llamada a funcion dividir*/
-                        /* System.out.println("el resultado es: "+Resultado);*/
-                        /*submenu*/
+                        calculadora.setTipoOperacion(division);
+                        calculadora.EjecutarOperacion();
+                        calculadora.ImprimirResultado();
+                        
                         System.out.println("\033[36mDesea realizar otra operacion?: ");
                         System.out.println("1.Si");
                         System.out.println("2.No");
