@@ -9,11 +9,18 @@ package Estructura;
  *
  * @author Vader33
  */
-public class Suma implements Operacion{
+public class Suma extends Tiene2Op implements Operacion{
 
+    
     @Override
     public float Operar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.Op1+this.Op2;
     }
+
+
+
+
+  
+    
     
 }

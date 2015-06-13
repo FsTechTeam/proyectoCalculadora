@@ -10,5 +10,7 @@ package Estructura;
  * @author Vader33
  */
 public interface Operacion {
+ 
     public float Operar();
+   
 }
