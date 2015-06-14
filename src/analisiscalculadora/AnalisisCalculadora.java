@@ -184,14 +184,12 @@ public class AnalisisCalculadora {
                         * Funcion sena
                         */
                     try {
-                        Division division=new Division();
+                        fSeno fseno=new fSeno();
                         
                         System.out.println("Ingrese el primer Operando:");
-                        division.Op1 = Integer.parseInt(in.readLine());
-                        System.out.println("Ingrese el segundo Operando:");
-                        division.Op2 = Integer.parseInt(in.readLine());
+                        fseno.Op = Integer.parseInt(in.readLine());
 
-                        calculadora.setTipoOperacion(division);
+                        calculadora.setTipoOperacion(fseno);
                         calculadora.EjecutarOperacion();
                         calculadora.ImprimirResultado();
                         
