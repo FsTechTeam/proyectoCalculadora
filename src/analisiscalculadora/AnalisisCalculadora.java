@@ -35,7 +35,8 @@ public class AnalisisCalculadora {
         System.out.println("3.Multiplicacion");
         System.out.println("4.Division");
         System.out.println("5. Funcion Seno");
-        System.out.println("6. Salir");
+        System.out.println("6. Funcion Coseno");
+        System.out.println("7. Salir");
 
         try {
 
@@ -181,7 +182,7 @@ public class AnalisisCalculadora {
                     }
                 case 5:
                        /**
-                        * Funcion sena
+                        * Funcion seno
                         */
                     try {
                         fSeno fseno=new fSeno();
@@ -213,9 +214,44 @@ public class AnalisisCalculadora {
                         System.out.println("\033[31mPor favor solo ingrese numeros enteros");
                         AnalisisCalculadora.main(args);
                     }
-
-
+                
                 case 6:
+                    /**
+                     * Funcion Coseno
+                     */
+                    try {
+                        fCoseno fcoseno=new fCoseno();
+                        System.out.println("Ingrese el primer Operando:");
+                        fcoseno.Op = Integer.parseInt(in.readLine());
+                        
+                        calculadora.setTipoOperacion(fcoseno);
+                        calculadora.EjecutarOperacion();
+                        calculadora.ImprimirResultado();
+                        
+                        System.out.println("\033[36mDesea realizar otra operacion?: ");
+                        System.out.println("1.Si");
+                        System.out.println("2.No");
+                        try {
+                            subopcion = Integer.parseInt(in.readLine());
+                            switch (subopcion) {
+                                case 1:
+                                    AnalisisCalculadora.main(args);
+                                case 2:
+                                    System.exit(0);
+                            }
+                        } catch (NumberFormatException ex) {
+                            System.out.println("\033[31mPor favor ingrese una de las Opciones indicadas");
+                            AnalisisCalculadora.main(args);
+                        }
+
+                    } catch (NumberFormatException err) {
+                        System.out.println("\033[31mPor favor solo ingrese numeros enteros");
+                        AnalisisCalculadora.main(args);
+                    }
+
+
+
+                case 7:
                     System.exit(0);
             }
         } catch (NumberFormatException ex) {
