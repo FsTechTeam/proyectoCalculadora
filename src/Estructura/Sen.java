@@ -4,11 +4,20 @@
  * and open the template in the editor.
  */
 package Estructura;
-
+import java.math.*;
 /**
  *
  * @author Rosario
  */
-public class Sen {
+public class Sen extends Tiene1Op implements Operacion{
+    public Sen() {
+       this.Op=0;
+    }
+
+    
+    @Override
+    public double Operar() {
+        return Math.sin(this.Op);
+    }
     
 }
