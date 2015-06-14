@@ -4,19 +4,18 @@
  * and open the template in the editor.
  */
 package Estructura;
-
+import java.math.*;
 /**
  *
- * @author Cliente
+ * @author Rosario
  */
-public class fCoseno extends Tiene1Op implements Operacion{
-    
-    public fCoseno(){
+public class Tan extends Tiene1Op implements Operacion{
+    public Tan(){
         this.Op=0;
     }
     @Override
     public double Operar(){
         
-        return Math.cos(Op);
+        return Math.tan(this.Op);
     }
 }

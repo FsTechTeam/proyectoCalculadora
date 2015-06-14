@@ -7,16 +7,19 @@ package Estructura;
 
 /**
  *
- * @author Cliente
+ * @author Rosario
  */
-public class fCoseno extends Tiene1Op implements Operacion{
+public class Exponente extends Tiene2Op implements Operacion{
     
-    public fCoseno(){
-        this.Op=0;
+    
+    public Exponente() {
+       this.Op1=0;
+       this.Op2=0;
     }
+
+    
     @Override
-    public double Operar(){
-        
-        return Math.cos(Op);
+    public double Operar() {
+        return this.Op1^this.Op2;
     }
 }

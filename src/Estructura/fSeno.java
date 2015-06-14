@@ -14,7 +14,7 @@ public class fSeno extends Tiene1Op implements Operacion{
     public fSeno(){
         this.Op=0;
     }
-    
+    @Override
     public double Operar(){
         
         return Math.sin(Op);
