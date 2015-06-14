@@ -9,6 +9,17 @@ package Estructura;
  *
  * @author Rosario
  */
-public class Exponente  {
+public class Exponente extends Tiene2Op implements Operacion{
     
+    
+    public Exponente() {
+       this.Op1=0;
+       this.Op2=0;
+    }
+
+    
+    @Override
+    public double Operar() {
+        return this.Op1^this.Op2;
+    }
 }
