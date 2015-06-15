@@ -20,6 +20,6 @@ public class Exponente extends Tiene2Op implements Operacion{
     
     @Override
     public double Operar() {
-        return this.Op1^this.Op2;
+        return Math.pow(Op1, Op2);
     }
 }
